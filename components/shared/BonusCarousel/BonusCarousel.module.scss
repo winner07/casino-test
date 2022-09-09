@@ -1,11 +1,22 @@
 .carousel {
-  max-width: 1440px;
+  max-width: 1153px;
   margin: 75px auto;
+  padding: 0 50px;
+  position: relative;
 
-  :global .carousel-indicators {
-    bottom: -50px;
+  :global .swiper {
+    padding-bottom: 50px;
+  }
 
-    [data-bs-target] {
+  :global .swiper-pagination {
+    bottom: 0;
+    line-height: 0;
+
+    @media screen and (max-width: 1023px) {
+      display: none;
+    }
+
+    .swiper-pagination-bullet {
       box-sizing: border-box;
       width: 40px;
       height: 12px;
@@ -13,33 +24,38 @@
       border: 1px solid #29557C;
       border-radius: 6px;
       opacity: 1;
+      background: none;
 
-      &.active {
+      &.swiper-pagination-bullet-active {
         border: none;
         background: linear-gradient(274.15deg, #2A577E 3.47%, #12395D 66.48%);
       }
     }
   }
 
-  :global .carousel-control-prev,
-  :global .carousel-control-next {
-    width: auto;
-    opacity: .25;
+  :global #prev-slide-btn,
+  :global #next-slide-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+    cursor: pointer;
 
-    &:hover,
-    &:focus {
-      opacity: 1;
+    &.swiper-button-disabled,
+    &:hover {
+      opacity: .25;
+    }
+
+    &.swiper-button-disabled {
+      cursor: default;
     }
   }
 
-  :global .carousel-inner {
-    width: auto;
-    margin: 0 50px;
+  :global #prev-slide-btn {
+    left: 0;
   }
-}
 
-.slide {
-  display: flex;
-  justify-content: center;
-  column-gap: 28px;
+  :global #next-slide-btn {
+    right: 0;
+  }
 }

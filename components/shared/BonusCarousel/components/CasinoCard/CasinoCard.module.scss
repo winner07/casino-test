@@ -1,27 +1,24 @@
 .card {
-  width: 242px;
+  max-width: 239px;
+  margin: 0 auto;
   background: #0C2B48;
   border: none;
   border-radius: 6px;
   font: 16px Roboto, sans-serif;
 
   &:nth-child(1) .head {
-    background: #172A4A;
-  }
-
-  &:nth-child(2) .head {
     background: #030D01;
   }
 
-  &:nth-child(3) .head {
+  &:nth-child(2) .head {
     background: #0A2703;
   }
 
-  &:nth-child(4) .head {
+  &:nth-child(3) .head {
     background: #161616;
   }
 
-  &:nth-child(5) .head {
+  &:nth-child(4) .head {
     background: #271433;
   }
 }

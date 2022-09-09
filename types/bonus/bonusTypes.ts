@@ -1,7 +1,5 @@
-import { StaticImageData } from 'next/image';
-
 export interface BonusType {
-  logo: string | StaticImageData;
+  logo: string;
   title: string;
   isExclusive?: boolean;
   type: string;

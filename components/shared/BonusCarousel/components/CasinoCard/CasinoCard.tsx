@@ -1,11 +1,6 @@
 import React from 'react';
-import Image from 'next/image';
 import { Button, Card, Stack } from 'react-bootstrap';
 import { BonusType } from '../../../../../types/bonus/bonusTypes';
-import exclusiveIcon from '../../../../../public/icons/exclusive.png';
-import infoIcon from '../../../../../public/icons/info.png';
-import usaIcon from '../../../../../public/icons/usa.png';
-import checkIcon from '../../../../../public/icons/check.png';
 import styles from './CasinoCard.module.scss';
 
 interface CasinoCardProps {
@@ -19,14 +14,14 @@ export function CasinoCard({ card:
     <Card className={styles.card}>
       <Card.Header className={styles.head}>
         <div className={styles.logo}>
-          <Image src={logo} alt="" />
+          <img src={logo} alt="" />
         </div>
         <Card.Title as="h3" className={styles.title}>{title}</Card.Title>
       </Card.Header>
       <Card.Body className={styles.body}>
         {isExclusive && (
           <div className={styles.exclusive}>
-            <Image src={exclusiveIcon} alt="" />
+            <img src="/icons/exclusive.png" alt="" />
           </div>
         )}
         <span className={styles.type}>{type}</span>
@@ -40,15 +35,15 @@ export function CasinoCard({ card:
           <Button variant="warning" className={styles.btn}>Play</Button>
           <div className={styles.country}>
             <div className={styles.countryIcon}>
-              <Image src={usaIcon} alt="" />
+              <img src="/icons/usa.png" alt="" />
             </div>
             <div className={styles.countryCheck}>
-              <Image src={checkIcon} alt="" />
+              <img src="/icons/check.png" alt="" />
             </div>
           </div>
         </Stack>
         <div className={styles.info}>
-          <Image src={infoIcon} alt="" />
+          <img src="/icons/info.png" alt="" />
         </div>
       </Card.Body>
     </Card>

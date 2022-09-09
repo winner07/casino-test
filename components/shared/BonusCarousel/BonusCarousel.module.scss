@@ -1,0 +1,45 @@
+.carousel {
+  max-width: 1440px;
+  margin: 75px auto;
+
+  :global .carousel-indicators {
+    bottom: -50px;
+
+    [data-bs-target] {
+      box-sizing: border-box;
+      width: 40px;
+      height: 12px;
+      margin: 0 6px;
+      border: 1px solid #29557C;
+      border-radius: 6px;
+      opacity: 1;
+
+      &.active {
+        border: none;
+        background: linear-gradient(274.15deg, #2A577E 3.47%, #12395D 66.48%);
+      }
+    }
+  }
+
+  :global .carousel-control-prev,
+  :global .carousel-control-next {
+    width: auto;
+    opacity: .25;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
+
+  :global .carousel-inner {
+    width: auto;
+    margin: 0 50px;
+  }
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  column-gap: 28px;
+}
